@@ -20,7 +20,7 @@ public class SqlInjectionLesson6b extends AssignmentEndpoint {
   protected String getPassword() {
     String password = "dave";
     try (Connection connection = dataSource.getConnection()) {
-      String query = "SELECT password FROM user_system_data WHERE user_name = 'dave'";
+      String query = "SELECT password FROM user_system_data WHERE user_name = 'dave1'";
       try {
         Statement statement =
             connection.createStatement(
